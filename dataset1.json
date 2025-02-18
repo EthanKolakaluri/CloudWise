@@ -1,0 +1,158 @@
+{
+    "VMs": [
+      {
+        "VM Name": "VM2-AppServer-Alternative-1",
+        "Cost": "$80.00",
+        "CPU Usage (%)": 85.5,
+        "Memory Usage (%)": 75.0,
+        "Total Usage (Hours)": 850,
+        "Instance Type": "Standard D2s_v3",
+        "Disk Size (GB)": 100,
+        "OS Type": "Windows",
+        "Region": "East US"
+      },
+      {
+        "VM Name": "VM2-AppServer-Alternative-2",
+        "Cost": "$50.00",
+        "CPU Usage (%)": 80.0,
+        "Memory Usage (%)": 70.0,
+        "Total Usage (Hours)": 850,
+        "Instance Type": "Standard B2ms",
+        "Disk Size (GB)": 100,
+        "OS Type": "Windows",
+        "Region": "East US"
+      },
+      {
+        "VM Name": "VM2-AppServer-Alternative-3",
+        "Cost": "$15.00",
+        "CPU Usage (%)": 80.0,
+        "Memory Usage (%)": 70.0,
+        "Total Usage (Hours)": 850,
+        "Instance Type": "Standard D2s_v3 (Spot)",
+        "Disk Size (GB)": 100,
+        "OS Type": "Windows",
+        "Region": "East US"
+      },
+      {
+        "VM Name": "VM2-DatabaseServer-1",
+        "Cost": "$120.00",
+        "CPU Usage (%)": 90.0,
+        "Memory Usage (%)": 85.0,
+        "Total Usage (Hours)": 730,
+        "Instance Type": "Standard E4s_v3",
+        "Disk Size (GB)": 200,
+        "OS Type": "Linux",
+        "Region": "West US"
+      },
+      {
+        "VM Name": "VM2-WebServer-1",
+        "Cost": "$30.00",
+        "CPU Usage (%)": 50.0,
+        "Memory Usage (%)": 40.0,
+        "Total Usage (Hours)": 1000,
+        "Instance Type": "Standard B1ms",
+        "Disk Size (GB)": 50,
+        "OS Type": "Windows",
+        "Region": "North Europe"
+      },
+      {
+        "VM Name": "VM2-DataProcessingServer-1",
+        "Cost": "$150.00",
+        "CPU Usage (%)": 95.0,
+        "Memory Usage (%)": 92.0,
+        "Total Usage (Hours)": 900,
+        "Instance Type": "Standard F8s_v2",
+        "Disk Size (GB)": 500,
+        "OS Type": "Linux",
+        "Region": "East US"
+      },
+      {
+        "VM Name": "VM2-AppServer-Alternative-4",
+        "Cost": "$100.00",
+        "CPU Usage (%)": 85.0,
+        "Memory Usage (%)": 77.0,
+        "Total Usage (Hours)": 800,
+        "Instance Type": "Standard D4s_v3",
+        "Disk Size (GB)": 150,
+        "OS Type": "Windows",
+        "Region": "East US"
+      },
+      {
+        "VM Name": "VM2-FileServer-1",
+        "Cost": "$60.00",
+        "CPU Usage (%)": 70.0,
+        "Memory Usage (%)": 65.0,
+        "Total Usage (Hours)": 950,
+        "Instance Type": "Standard D2s_v3",
+        "Disk Size (GB)": 150,
+        "OS Type": "Linux",
+        "Region": "South East Asia"
+      },
+      {
+        "VM Name": "VM2-AnalyticsServer-1",
+        "Cost": "$200.00",
+        "CPU Usage (%)": 80.0,
+        "Memory Usage (%)": 85.0,
+        "Total Usage (Hours)": 750,
+        "Instance Type": "Standard D8s_v3",
+        "Disk Size (GB)": 1000,
+        "OS Type": "Windows",
+        "Region": "Australia East"
+      },
+      {
+        "VM Name": "VM2-BackupServer-1",
+        "Cost": "$40.00",
+        "CPU Usage (%)": 60.0,
+        "Memory Usage (%)": 50.0,
+        "Total Usage (Hours)": 1200,
+        "Instance Type": "Standard A1",
+        "Disk Size (GB)": 80,
+        "OS Type": "Windows",
+        "Region": "Canada Central"
+      },
+      {
+        "VM Name": "VM2-ProxyServer-1",
+        "Cost": "$70.00",
+        "CPU Usage (%)": 45.0,
+        "Memory Usage (%)": 60.0,
+        "Total Usage (Hours)": 1100,
+        "Instance Type": "Standard B2ms",
+        "Disk Size (GB)": 60,
+        "OS Type": "Linux",
+        "Region": "West Europe"
+      },
+      {
+        "VM Name": "VM2-DBReplicaServer-1",
+        "Cost": "$110.00",
+        "CPU Usage (%)": 65.0,
+        "Memory Usage (%)": 80.0,
+        "Total Usage (Hours)": 800,
+        "Instance Type": "Standard D3s_v3",
+        "Disk Size (GB)": 200,
+        "OS Type": "Windows",
+        "Region": "Central US"
+      },
+      {
+        "VM Name": "VM2-MailServer-1",
+        "Cost": "$90.00",
+        "CPU Usage (%)": 75.0,
+        "Memory Usage (%)": 60.0,
+        "Total Usage (Hours)": 950,
+        "Instance Type": "Standard B4ms",
+        "Disk Size (GB)": 120,
+        "OS Type": "Linux",
+        "Region": "UK South"
+      },
+      {
+        "VM Name": "VM2-AppServer-Alternative-5",
+        "Cost": "$130.00",
+        "CPU Usage (%)": 85.0,
+        "Memory Usage (%)": 78.0,
+        "Total Usage (Hours)": 780,
+        "Instance Type": "Standard D8s_v3",
+        "Disk Size (GB)": 250,
+        "OS Type": "Windows",
+        "Region": "East US"
+      }
+    ]
+  }
