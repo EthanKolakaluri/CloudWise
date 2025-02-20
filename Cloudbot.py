@@ -155,14 +155,14 @@ def query_deepseek(question, context):
 def chatbot_interface():
 
     custom_css = """
-        /* Change the main background color to sky blue */
+        /* Set the main background color to white */
         .gradio-container {
-            background-color: #87CEEB !important;
+            background-color: #FFFFFF !important;
         }
 
         /* Style the container around the textboxes */
         .gradio-row {
-            background-color: #87CEEB !important;  /* Sky blue background */
+            background-color: #FFFFFF !important;  /* White background */
             padding: 20px !important;  /* Add some padding */
             border-radius: 10px !important;  /* Rounded corners */
             margin: 10px 0 !important;  /* Add some margin */
@@ -171,8 +171,9 @@ def chatbot_interface():
         /* Style the textboxes */
         .gradio-textbox {
             background-color: #FFFFFF !important;  /* White background for textboxes */
-            border: 1px solid #87CEEB !important;  /* Sky blue border */
+            border: 1px solid #CCCCCC !important;  /* Light gray border */
             border-radius: 5px !important;
+            color: #000000 !important;  /* Black text */
         }
 
         /* Style the labels */
@@ -183,7 +184,7 @@ def chatbot_interface():
 
         /* Style the submit button */
         .gradio-button {
-            background-color: #87CEEB !important;  /* Sky blue button */
+            background-color: #1E90FF !important;  /* Dodger blue button */
             color: #FFFFFF !important;  /* White text */
             border: none !important;
             border-radius: 5px !important;
@@ -191,15 +192,43 @@ def chatbot_interface():
 
         /* Hover effect for the button */
         .gradio-button:hover {
-            background-color: #63B8FF !important;  /* Lighter sky blue on hover */
+            background-color: #187BCD !important;  /* Slightly darker blue on hover */
         }
     """
     with gr.Blocks() as demo:
+
         # Title at the top
-        gr.Markdown("<h1 style='text-align: center;'>CloudWise</h1>")
+        gr.Markdown("""
+        <h1 style='text-align: center; font-size: 50px;'>
+            <span style='color: #63B8FF;'>Cloud</span><span style='
+                color: #000000; /* Black text for "Wise" */
+                text-shadow: 
+                    -1px -1px 0 #FFFFFF,  
+                     1px -1px 0 #FFFFFF,
+                    -1px  1px 0 #FFFFFF,
+                     1px  1px 0 #FFFFFF; /* White border */
+            '>Wise</span>
+        </h1>
+        """)
         
+        gr.Markdown("""
+        ### Example Prompts
+        Here are some examples of prompts you can use to interact with CloudWise:
+        
+        - **VM optimization based on product description**: "What VM's would be best to use for (product description)?"
+        - **Cost Optimization**: "Which VMs are the most expensive and how can I reduce their costs?"
+        - **Resource Usage**: "Show me VMs with high CPU or memory usage."
+        - **Instance Recommendations**: "What instance type is best for a high-performance database?"
+        - **Region Analysis**: "Which region has the lowest cost for running my VMs?"
+        - **Disk Size**: "How can I optimize disk sizes for my VMs?"
+        - **OS Type**: "What are the most cost-effective OS types for my workloads?"
+        
+        <br><br>
+        Feel free to ask any question related to optimizing or customizing your cloud infrastructure!
+        """)
+
         # Create text input for user question and output text area
-        question_input = gr.Textbox(label="Ask your question", placeholder="Enter your question here...")
+        question_input = gr.Textbox(label="Ask any question to optimize or customize your cloud", placeholder="Enter your question here...")
         answer_output = gr.Textbox(label="Answer", interactive=False)
         
         # Define the interaction logic
