@@ -151,9 +151,41 @@ def query_deepseek(question, context):
         print(f"Failed to query DeepSeek: {e}")
         return "Failed to generate an answer."
 
-# Gradio Blocks interface with custom styling
-def chatbot_interface():
+# Introduction Page
+def introduction_page():
+    return gr.Markdown("""
+    # Welcome to CloudWise
 
+    ## Introduction
+    CloudWise is a powerful tool designed to help you optimize and customize your cloud infrastructure. Whether you're looking to reduce costs, improve performance, or find the best instance types for your workloads, CloudWise has you covered.
+
+    ### Key Features
+    - **VM Optimization**: Get recommendations for the best VMs based on your product description.
+    - **Cost Analysis**: Identify the most expensive VMs and learn how to reduce costs.
+    - **Resource Usage**: Monitor CPU and memory usage to ensure optimal performance.
+    - **Instance Recommendations**: Find the best instance types for high-performance databases or other workloads.
+    - **Region Analysis**: Discover which regions offer the lowest costs for running your VMs.
+    - **Disk Size Optimization**: Learn how to optimize disk sizes for your VMs.
+    - **OS Type Recommendations**: Find the most cost-effective OS types for your workloads.
+
+    ### How to Use
+    Navigate to the **Cloudbot** tab to start asking questions and get real-time recommendations. Use the example prompts provided to get started quickly.
+
+    ### Example Prompts
+    - **VM optimization based on product description**: "What VM's would be best to use for (product description)?"
+    - **Cost Optimization**: "Which VMs are the most expensive and how can I reduce their costs?"
+    - **Resource Usage**: "Show me VMs with high CPU or memory usage."
+    - **Instance Recommendations**: "What instance type is best for a high-performance database?"
+    - **Region Analysis**: "Which region has the lowest cost for running my VMs?"
+    - **Disk Size**: "How can I optimize disk sizes for my VMs?"
+    - **OS Type**: "What are the most cost-effective OS types for my workloads?"
+
+    <br><br>
+    Feel free to explore and ask any question related to optimizing or customizing your cloud infrastructure!
+    """)
+
+# Chatbot Interface
+def chatbot_interface():
     custom_css = """
         /* Set the main background color to white */
         .gradio-container {
@@ -195,8 +227,7 @@ def chatbot_interface():
             background-color: #187BCD !important;  /* Slightly darker blue on hover */
         }
     """
-    with gr.Blocks() as demo:
-
+    with gr.Blocks(css=custom_css) as demo:
         # Title at the top
         gr.Markdown("""
         <h1 style='text-align: center; font-size: 50px;'>
@@ -241,5 +272,13 @@ def chatbot_interface():
 
     return demo
 
+# Create the tabbed interface
+with gr.Blocks() as demo:
+    with gr.Tabs():
+        with gr.TabItem("Introduction"):
+            introduction_page()
+        with gr.TabItem("Cloudbot"):
+            chatbot_interface()
+
 # Launch the app with Gradio Blocks
-chatbot_interface().launch()
+demo.launch()
